@@ -1,0 +1,20 @@
+.css-slider__bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.css-slider__bullet {
+    background-color: blue;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+}
+.css-slider__bullet.current {
+    background-color: magenta;
+}
+.css-slider__bullet.current:hover {
+    cursor: default;
+    pointer-events: none;
+}
