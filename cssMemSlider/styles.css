@@ -1,3 +1,7 @@
+img {
+    height: 200px;
+    width: auto;
+}
 .css-slider__bullets {
     display: flex;
     justify-content: center;
