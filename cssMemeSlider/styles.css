@@ -95,3 +95,24 @@ body {
 input:checked + .css-slider_wrapper ~ .css-slider__bullets label[for="slide1"] {
     background-color: #000;
 }
+
+/* transition between slides */
+input#slide1:checked ~ .css-slider_wrapper .slider {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .css-slider_wrapper .slider {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .css-slider_wrapper .slider {
+    transform: translateX(-200%);
+}
+
+input#slide4:checked ~ .css-slider_wrapper .slider {
+    transform: translateX(-300%);
+}
+
+input#slide5:checked ~ .css-slider_wrapper .slider {
+    transform: translateX(-400%);
+}
