@@ -91,9 +91,6 @@ body {
 }
 
 /* current bullet */
-input:checked + .css-slider_wrapper ~ .css-slider__bullets label[for="slide1"] {
-    background-color: #000;
-}
 input#slide1:checked ~ .css-slider__bullets label[for="slide1"],
 input#slide2:checked ~ .css-slider__bullets label[for="slide2"],
 input#slide3:checked ~ .css-slider__bullets label[for="slide3"],
