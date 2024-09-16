@@ -61,7 +61,7 @@ body {
 
 .slider__caption {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: #333;
     text-align: center;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -93,6 +93,20 @@ body {
 /* current bullet */
 input:checked + .css-slider_wrapper ~ .css-slider__bullets label[for="slide1"] {
     background-color: #000;
+}
+input#slide1:checked ~ .css-slider__bullets label[for="slide1"],
+input#slide2:checked ~ .css-slider__bullets label[for="slide2"],
+input#slide3:checked ~ .css-slider__bullets label[for="slide3"],
+input#slide4:checked ~ .css-slider__bullets label[for="slide4"],
+input#slide5:checked ~ .css-slider__bullets label[for="slide5"] {
+    background-color: #000;
+}
+input#slide1:checked ~ .css-slider__bullets label[for="slide1"]:hover,
+input#slide2:checked ~ .css-slider__bullets label[for="slide2"]:hover,
+input#slide3:checked ~ .css-slider__bullets label[for="slide3"]:hover,
+input#slide4:checked ~ .css-slider__bullets label[for="slide4"]:hover,
+input#slide5:checked ~ .css-slider__bullets label[for="slide5"]:hover {
+    cursor: default;
 }
 
 /* transition between slides */
