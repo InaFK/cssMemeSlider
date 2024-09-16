@@ -9,35 +9,44 @@
 <body>
     <main class="main">
         <section class="mem-slider_wrapper">
-                <div class="css-slider_container">
-                    <div class="css-slider_wrapper">
-                        <div class="slider">
-                            <div class="slide">
-                                <img class="slider__image" src="./images/slide1.png" alt="slide1">
-                            </div>
-                            <div class="slide">
-                                <img class="slider__image" src="./images/slide2.jpg" alt="slide2">
-                            </div>
-                            <div class="slide">
-                                <img class="slider__image" src="./images/slide3.jpg" alt="slide3">
-                            </div>
-                            <div class="slide">
-                                <img class="slider__image" src="./images/slide4.jpg" alt="slide4">
-                            </div>
-                            <div class="slide">
-                                <img class="slider__image" src="./images/slide5.jpg" alt="slide5">
-                            </div>                        
-                        </div>
+            <input type="radio" name="slider" id="slide1" class="css-slider__input" checked>
+            <input type="radio" name="slider" id="slide2" class="css-slider__input">
+            <input type="radio" name="slider" id="slide3" class="css-slider__input">
+            <input type="radio" name="slider" id="slide4" class="css-slider__input">
+            <input type="radio" name="slider" id="slide5" class="css-slider__input">
+
+            <div class="css-slider_wrapper">
+                <div class="slider">
+                    <div class="slide">
+                        <img class="slider__image" src="./images/slide1.png" alt="Funny Meme 1">
+                        <p class="slider__caption">Funny Meme 1</p>
                     </div>
-                    <div class="css-slider__bullets">
-                        <button class="css-slider__bullet current"></button>
-                        <button class="css-slider__bullet"></button>
-                        <button class="css-slider__bullet"></button>
-                        <button class="css-slider__bullet"></button>
-                        <button class="css-slider__bullet"></button>
+                    <div class="slide">
+                        <img class="slider__image" src="./images/slide2.jpg" alt="Funny Meme 2">
+                        <p class="slider__caption">Funny Meme 2</p>
+                    </div>
+                    <div class="slide">
+                        <img class="slider__image" src="./images/slide3.jpg" alt="Funny Meme 3">
+                        <p class="slider__caption">Funny Meme 3</p>
+                    </div>
+                    <div class="slide">
+                        <img class="slider__image" src="./images/slide4.jpg" alt="Funny Meme 4">
+                        <p class="slider__caption">Funny Meme 4</p>
+                    </div>
+                    <div class="slide">
+                        <img class="slider__image" src="./images/slide5.jpg" alt="Funny Meme 5">
+                        <p class="slider__caption">Funny Meme 5</p>
                     </div>
                 </div>
             </div>
+            <div class="css-slider__bullets">
+                <label for="slide1" class="css-slider__bullet"></label>
+                <label for="slide2" class="css-slider__bullet"></label>
+                <label for="slide3" class="css-slider__bullet"></label>
+                <label for="slide4" class="css-slider__bullet"></label>
+                <label for="slide5" class="css-slider__bullet"></label>
+            </div>
         </section>
+    </main>
 </body>
 </html>

@@ -1,29 +1,97 @@
-img {
-    height: 200px;
-    width: auto;
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-slider__input {
+    display: none;
+}
+
+.mem-slider_wrapper {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.css-slider_wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 5%;
+}
+
+/* slides */
 .slider {
     display: flex;
-    justify-content: space-around;
-    width: 70%;
+    width: 500%;
+    transition: transform 0.5s ease-in-out;
 }
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider__image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.slider__caption {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* bullets */
 .css-slider__bullets {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 10px;
 }
+
 .css-slider__bullet {
-    background-color: blue;
-    border: 5px solid transparent;
+    border: none;
+    background-color: #ccc;
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
     border-radius: 50%;
     cursor: pointer;
-    height: 26px;
-    width: 26px;
+    transition: background-color 0.3s;
 }
-.css-slider__bullet.current {
-    background-color: magenta;
+
+.css-slider__bullet:hover,
+.css-slider__bullet:focus {
+    background-color: #666;
 }
-.css-slider__bullet.current:hover {
-    cursor: default;
-    pointer-events: none;
+
+/* current bullet */
+input:checked + .css-slider_wrapper ~ .css-slider__bullets label[for="slide1"] {
+    background-color: #000;
 }
