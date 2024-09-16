@@ -116,3 +116,18 @@ input#slide4:checked ~ .css-slider_wrapper .slider {
 input#slide5:checked ~ .css-slider_wrapper .slider {
     transform: translateX(-400%);
 }
+
+@media screen and (max-width: 768px) {
+    .slider__image {
+        max-height: 250px;
+    }
+
+    .slider__caption {
+        font-size: 1.2rem;
+    }
+
+    .css-slider__bullet {
+        width: 20px;
+        height: 20px;
+    }
+}
