@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -26,8 +25,7 @@ body {
 }
 
 .mem-slider_wrapper {
-    position: relative;
-    max-width: 320px;
+    max-width: 20rem;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -41,7 +39,7 @@ body {
 .slider {
     display: flex;
     width: 500%;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 
 .slide {
@@ -55,31 +53,43 @@ body {
 
 .slider__image {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+    max-height: 25rem;
+    object-fit: contain;
 }
 
 .slider__caption {
-    margin-top: 10px;
+    margin-top: 0.63rem;
     font-size: 1.0rem;
     color: #333;
     text-align: center;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+input#slide1:checked ~ .css-slider_wrapper .slider .slide:nth-child(1) .slider__caption,
+input#slide2:checked ~ .css-slider_wrapper .slider .slide:nth-child(2) .slider__caption,
+input#slide3:checked ~ .css-slider_wrapper .slider .slide:nth-child(3) .slider__caption,
+input#slide4:checked ~ .css-slider_wrapper .slider .slide:nth-child(4) .slider__caption,
+input#slide5:checked ~ .css-slider_wrapper .slider .slide:nth-child(5) .slider__caption {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
 }
 
 /* bullets */
 .css-slider__bullets {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0.63rem;
 }
 
 .css-slider__bullet {
     border: none;
     background-color: #ccc;
-    width: 25px;
-    height: 25px;
-    margin: 0 10px;
+    width: 1.88rem;
+    height: 1.88rem;
+    margin: 0 0.63rem;
+    padding: 0.63rem;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -98,6 +108,7 @@ input#slide4:checked ~ .css-slider__bullets label[for="slide4"],
 input#slide5:checked ~ .css-slider__bullets label[for="slide5"] {
     background-color: #000;
 }
+
 input#slide1:checked ~ .css-slider__bullets label[for="slide1"]:hover,
 input#slide2:checked ~ .css-slider__bullets label[for="slide2"]:hover,
 input#slide3:checked ~ .css-slider__bullets label[for="slide3"]:hover,
@@ -127,17 +138,17 @@ input#slide5:checked ~ .css-slider_wrapper .slider {
     transform: translateX(-400%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
     .slider__image {
-        max-height: 250px;
+        max-height: 15.6rem;
     }
 
     .slider__caption {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     .css-slider__bullet {
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
     }
 }
