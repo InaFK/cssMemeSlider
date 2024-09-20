@@ -88,11 +88,10 @@ input#slide5:checked ~ .css-slider_wrapper .slider .slide:nth-child(5) .slider__
 }
 
 .css-slider__bullet {
-    border: none;
+    border: 0.63rem solid #f4f4f4;
     background-color: #ccc;
     width: 1.88rem;
     height: 1.88rem;
-    margin: 0 0.63rem;
     padding: 0.63rem;
     border-radius: 50%;
     cursor: pointer;
